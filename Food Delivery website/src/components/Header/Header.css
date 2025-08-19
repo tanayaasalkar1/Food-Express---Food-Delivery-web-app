@@ -1,0 +1,82 @@
+.header {
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header.png') no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* To make sure overlay stays inside */
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Change opacity here */
+    z-index: 2;
+}
+.view-btn {
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 2px solid yellow;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.view-btn:hover {
+    background-color: black;
+    color: white;
+}
+.header-contents {
+    position: relative;
+    z-index: 3; /* Keep content above overlay */
+    color: white; /* Make text visible on dark overlay */
+    padding: 20px;
+    animation: fadeIn 3s;
+}
+.header-contents h2 {
+    color: white;
+    font-size: max(4.5vw, 18px);
+    padding-bottom: 10px;
+}
+.header-contents p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.inside-header {
+    color: white;
+    font-size: max(2.5vw, 16px);
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1050px) {
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        max-width: 65%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .header-contents h2{
+        max-width: 45%;
+        font-size: 20px;
+    }
+}
+@media (max-width: 750px) {
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button {
+        padding: 2vw 4vw;
+    }
+}

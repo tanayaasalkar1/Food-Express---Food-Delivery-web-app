@@ -1,0 +1,32 @@
+.sidebar{
+    width: 18%;
+    min-height: 100vh;
+    border: 2px solid yellow;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+}
+.sidebar-ops {
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sidebar-op {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px ;
+    cursor: pointer;
+}
+
+
+
+@media (max-width:900px) {
+    .sidebar-op p {
+        display: none;
+    }
+}
